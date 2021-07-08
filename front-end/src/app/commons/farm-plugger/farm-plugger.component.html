@@ -1,0 +1,7 @@
+<app-farm [farm]="farm">
+    <span title>Farm #{{farm.farm_id}}</span>
+    <div footer>
+        <mat-spinner *ngIf="updating"></mat-spinner>
+        <mat-slide-toggle *ngIf="!updating" [checked]="!!farm.visible" color="primary" (change)="updatePlugging($event)">{{farm.visible ? 'Powered On' : 'Powered Off'}}</mat-slide-toggle>
+    </div>
+</app-farm>

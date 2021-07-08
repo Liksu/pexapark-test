@@ -1,0 +1,15 @@
+# compiled output
+/front-end/dist
+
+# dependencies
+/front-end/node_modules
+
+# IDEs and editors
+/.idea
+/coverage
+npm-debug.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db

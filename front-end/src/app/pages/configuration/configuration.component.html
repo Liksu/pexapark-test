@@ -1,0 +1,13 @@
+<div *mobxAutorun>
+    <div *ngIf="farms.available.length; else loader">
+        <h1>All available farms</h1>
+
+        <div *ngFor="let farm of farms.available">
+            <app-farm-plugger [farm]="farm"></app-farm-plugger>
+        </div>
+    </div>
+</div>
+
+<ng-template #loader>
+    <mat-spinner></mat-spinner>
+</ng-template>

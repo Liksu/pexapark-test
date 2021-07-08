@@ -1,0 +1,7 @@
+<app-farm [farm]="farm">
+    <span title>Farm #{{farm.farm_id}}</span>
+    <div footer>
+        <mat-spinner diameter="42" *ngIf="!farm.data"></mat-spinner>
+        <app-snake-chart *ngIf="farm.data" [data]="farm.data"></app-snake-chart>
+    </div>
+</app-farm>

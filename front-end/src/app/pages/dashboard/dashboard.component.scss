@@ -1,0 +1,38 @@
+header {
+    height: calc(100vw / 3);
+    max-height: 440px;
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --font-size: 64px;
+
+    h1 {
+        font-size: var(--font-size);
+        font-weight: 700;
+        line-height: var(--font-size);
+    }
+
+    mat-spinner {
+        display: inline-block;
+    }
+
+    &:before {
+        z-index: -1;
+        content: "";
+        background-image: url("/assets/landscape.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: lightblue;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

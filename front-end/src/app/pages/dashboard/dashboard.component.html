@@ -1,0 +1,16 @@
+<header>
+    <h1>Capacity factor:
+        <span *ngIf="factor != null; else loader">{{factor}}</span>
+    </h1>
+</header>
+
+<div *mobxAutorun>
+    <div *ngIf="farms.visible.length; else loader">
+        <h1>Power capacity of active farms in the last week</h1>
+        <app-farm-power *ngFor="let farm of farms.visible" [farm]="farm"></app-farm-power>
+    </div>
+</div>
+
+<ng-template #loader>
+    <mat-spinner></mat-spinner>
+</ng-template>

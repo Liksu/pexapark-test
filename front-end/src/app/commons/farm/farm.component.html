@@ -1,0 +1,17 @@
+<div class="wind-farm" *mobxAutorun>
+    <div class="text">
+        <a class="title" routerLink="/farm/{{farm.farm_id}}">
+            <ng-content select="[title]"></ng-content>
+        </a>
+        <p class="value">
+            {{farm.value ?? farm.capacity}}
+            <span class="unit">
+                MW
+                <span *ngIf="farm.value != null">of {{farm.capacity}} MW</span>
+            </span>
+        </p>
+    </div>
+    <div class="footer">
+        <ng-content select="[footer]"></ng-content>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "http://liksu.com:4492",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
